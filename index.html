@@ -1,120 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="rw">
 <head>
   <meta charset="UTF-8">
-  <title>Brillant - Movie Site</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Agasobanuye Films</title>
   <style>
     body {
-      background-color: #000;
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #121212;
       color: #fff;
-      font-family: Arial, sans-serif;
     }
-    .movie-card {
-      background-color: #111;
-      border: 1px solid #444;
+    header {
+      background-color: #ff6f00;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .films {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .film-box {
+      background-color: #1e1e1e;
       border-radius: 10px;
       overflow: hidden;
-      transition: transform 0.3s ease;
+      text-align: center;
+      transition: transform 0.3s;
     }
-    .movie-card:hover {
+    .film-box:hover {
       transform: scale(1.03);
-      box-shadow: 0 0 15px red;
     }
-    .movie-img {
-      height: 300px;
-      object-fit: cover;
+    .film-image img {
       width: 100%;
+      height: 200px;
+      object-fit: cover;
     }
-    .btn-trailer {
-      background-color: red;
+    .film-title {
+      padding: 10px;
+      font-size: 18px;
+    }
+    .btn {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 8px 16px;
+      background-color: #ff6f00;
       color: white;
-      border: none;
+      text-decoration: none;
+      border-radius: 5px;
     }
-    .btn-trailer:hover {
-      background-color: darkred;
+    @media (max-width: 600px) {
+      .film-title {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
+  <header>Agasobanuye Films</header>
 
-  <div class="container py-5">
-    <h1 class="text-center mb-4" style="color:red;">Brillant Movie Site</h1>
-    <div class="row g-4">
-
-      <!-- Movie 1 -->
-      <div class="col-md-4">
-        <div class="movie-card p-2">
-          <img src="images/g20.jpg" alt="G20" class="movie-img">
-          <div class="p-2">
-            <h5>G20</h5>
-            <p><strong>Genre:</strong> Action</p>
-            <p><strong>Year:</strong> 2024</p>
-            <p><strong>Stars:</strong> Viola Davis</p>
-            <a href="#" class="btn btn-trailer">Watch Trailer</a>
-          </div>
-        </div>
+  <div class="films">
+    <div class="film-box">
+      <div class="film-image">
+        <img src="https://via.placeholder.com/300x200?text=G20" alt="G20">
       </div>
+      <div class="film-title">G20</div>
+      <a href="#" class="btn">Watch Trailer</a>
+    </div>
 
-      <!-- Movie 2 -->
-      <div class="col-md-4">
-        <div class="movie-card p-2">
-          <img src="images/workingman.jpg" alt="A Working Man" class="movie-img">
-          <div class="p-2">
-            <h5>A Working Man</h5>
-            <p><strong>Genre:</strong> Drama</p>
-            <p><strong>Year:</strong> 2023</p>
-            <p><strong>Stars:</strong> Joe Smith</p>
-            <a href="#" class="btn btn-trailer">Watch Trailer</a>
-          </div>
-        </div>
+    <div class="film-box">
+      <div class="film-image">
+        <img src="https://via.placeholder.com/300x200?text=A+Working+Man" alt="A Working Man">
       </div>
+      <div class="film-title">A Working Man</div>
+      <a href="#" class="btn">Watch Trailer</a>
+    </div>
 
-      <!-- Movie 3 -->
-      <div class="col-md-4">
-        <div class="movie-card p-2">
-          <img src="images/fountainofyouth.jpg" alt="Fountain of Youth" class="movie-img">
-          <div class="p-2">
-            <h5>Fountain of Youth</h5>
-            <p><strong>Genre:</strong> Fantasy</p>
-            <p><strong>Year:</strong> 2022</p>
-            <p><strong>Stars:</strong> Emily Star</p>
-            <a href="#" class="btn btn-trailer">Watch Trailer</a>
-          </div>
-        </div>
+    <div class="film-box">
+      <div class="film-image">
+        <img src="https://via.placeholder.com/300x200?text=Sikandar" alt="Sikandar">
       </div>
+      <div class="film-title">Sikandar</div>
+      <a href="#" class="btn">Watch Trailer</a>
+    </div>
 
-      <!-- Movie 4 -->
-      <div class="col-md-4">
-        <div class="movie-card p-2">
-          <img src="images/sinners.jpg" alt="Sinners" class="movie-img">
-          <div class="p-2">
-            <h5>Sinners</h5>
-            <p><strong>Genre:</strong> Thriller</p>
-            <p><strong>Year:</strong> 2021</p>
-            <p><strong>Stars:</strong> Jake Dark</p>
-            <a href="#" class="btn btn-trailer">Watch Trailer</a>
-          </div>
-        </div>
+    <div class="film-box">
+      <div class="film-image">
+        <img src="https://via.placeholder.com/300x200?text=Army+of+Thieves" alt="Army of Thieves">
       </div>
+      <div class="film-title">Army of Thieves</div>
+      <a href="#" class="btn">Watch Trailer</a>
+    </div>
 
-      <!-- Movie 5 -->
-      <div class="col-md-4">
-        <div class="movie-card p-2">
-          <img src="images/armythieves.jpg" alt="Army of Thieves" class="movie-img">
-          <div class="p-2">
-            <h5>Army of Thieves</h5>
-            <p><strong>Genre:</strong> Heist</p>
-            <p><strong>Year:</strong> 2021</p>
-            <p><strong>Stars:</strong> Matthias Schweighöfer</p>
-            <a href="#" class="btn btn-trailer">Watch Trailer</a>
-          </div>
-        </div>
+    <div class="film-box">
+      <div class="film-image">
+        <img src="https://via.placeholder.com/300x200?text=Jaat" alt="Jaat">
       </div>
+      <div class="film-title">Jaat</div>
+      <a href="#" class="btn">Watch Trailer</a>
+    </div>
 
+    <div class="film-box">
+      <div class="film-image">
+        <img src="https://via.placeholder.com/300x200?text=Trouble" alt="Trouble">
+      </div>
+      <div class="film-title">Trouble</div>
+      <a href="#" class="btn">Watch Trailer</a>
+    </div>
+
+    <div class="film-box">
+      <div class="film-image">
+        <img src="https://via.placeholder.com/300x200?text=Sinners" alt="Sinners">
+      </div>
+      <div class="film-title">Sinners</div>
+      <a href="#" class="btn">Watch Trailer</a>
+    </div>
+
+    <div class="film-box">
+      <div class="film-image">
+        <img src="https://via.placeholder.com/300x200?text=Veer" alt="Veer">
+      </div>
+      <div class="film-title">Veer</div>
+      <a href="#" class="btn">Watch Trailer</a>
+    </div>
+
+    <div class="film-box">
+      <div class="film-image">
+        <img src="https://via.placeholder.com/300x200?text=Kesari" alt="Kesari">
+      </div>
+      <div class="film-title">Kesari</div>
+      <a href="#" class="btn">Watch Trailer</a>
+    </div>
+
+    <div class="film-box">
+      <div class="film-image">
+        <img src="https://via.placeholder.com/300x200?text=Fountain+of+Youth" alt="Fountain of Youth">
+      </div>
+      <div class="film-title">Fountain of Youth</div>
+      <a href="#" class="btn">Watch Trailer</a>
+    </div>
+
+    <div class="film-box">
+      <div class="film-image">
+        <img src="https://via.placeholder.com/300x200?text=Wakanda+Forever" alt="Wakanda Forever">
+      </div>
+      <div class="film-title">Wakanda Forever</div>
+      <a href="#" class="btn">Watch Trailer</a>
+    </div>
+
+    <div class="film-box">
+      <div class="film-image">
+        <img src="https://via.placeholder.com/300x200?text=Exterritorial" alt="Exterritorial">
+      </div>
+      <div class="film-title">Exterritorial</div>
+      <a href="#" class="btn">Watch Trailer</a>
+    </div>
+
+    <div class="film-box">
+      <div class="film-image">
+        <img src="https://via.placeholder.com/300x200?text=Martin" alt="Martin">
+      </div>
+      <div class="film-title">Martin</div>
+      <a href="#" class="btn">Watch Trailer</a>
     </div>
   </div>
-
 </body>
 </html>
